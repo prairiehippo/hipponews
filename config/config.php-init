@@ -1,0 +1,35 @@
+<?php
+
+return array(
+
+    'database' => array(
+        'driver' => 'MySQL',
+        'user' => '',
+        'pass' => '',
+        'host' => '',
+        'name' => '',
+    ),
+
+    /**
+     * set root as follows: 'path' => 'ClassName/methodName'
+     */
+    'routes' => array(
+        '' => 'Index/index',
+        'story' => 'Story/index',
+        'story/create' => 'Story/create',
+        'comment/create' => 'Comment/create',
+        'user/create' => 'User/create',
+        'user/account' => 'User/account',
+        'user/login' => 'User/login',
+        'user/logout' => 'User/logout',
+    ),
+
+    'views' => array(
+        'view_path' => realpath('../view/views'),
+        'layout_path' => realpath('../view/layouts'),
+    ),
+
+    //Advanced configuration
+    'router_driver' => 'BasicRouter',
+    'session_driver' => 'BasicSession'
+);
